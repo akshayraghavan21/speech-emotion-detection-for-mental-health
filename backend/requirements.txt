@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+librosa
+numpy
+tensorflow-macos==2.13.0
+tensorflow-metal
+scikit-learn
+pydantic
