@@ -1,5 +1,13 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  height: 100vh; /* Use full viewport height */
 }
 
 .App-logo {
@@ -35,4 +43,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+.right-pane {
+  height: 100%;
+  padding: 1rem;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  overflow-y: auto;
+}
+
+.journal-pane {
+  height: 100vh;
+  background-color: #e9d9b0;
+  padding: 1.5rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.journal-pane h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.journal-entry {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journal-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.journal-entry p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.journal-entry audio {
+  margin-top: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.journal-entry button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.journal-entry button:hover {
+  opacity: 0.9;
+}
+
+.journal-entry button.edit {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.journal-entry button.save {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.journal-entry button.cancel {
+  background-color: #f44336;
+  color: #ffffff;
 }
